@@ -115,9 +115,13 @@ nano pi.txt #On windows do this by clicking on the file
 ```
 
 Ok, you now see four types of things:
+
 *<<<<<<< HEAD* is the branch you merge too
+
 *>>>>>>> error_branch* is one of the branches you merge from
+
 *=======* is a seperator, it has no function but to seperate the merges in the order you merged them
+
 *regular code* is just code
 
 **What you need to do is to delete all stuff betewen the ** *<<<<<<<* ** and ** *>>>>>>>* ** that is not wanted! You can modify the code how you want but you must delete everything but code!**
