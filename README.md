@@ -137,7 +137,7 @@ git add .
 git commit 
 ```
 
-*Alternativ you may also use the easy console way by doing this **instead** *
+*Alternativ you may also use the easy console way by doing this* **instead**
 
 ```
 #GUIs can do this way better but there is a interactive way
