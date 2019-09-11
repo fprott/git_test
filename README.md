@@ -40,6 +40,16 @@ git pull
 This picture shows how this works:
 https://i.stack.imgur.com/nWYnQ.png
 
+**Now two really usefull comants**
+```
+#what is going on
+git status
+#what changed
+git diff
+#I really need a GUI to see what happend (NOT RECOMENDED if GitKraken or GitDesktop is installed)
+gitk
+```
+
 **You made an mistake didn't you? (If not then make one :D)**
 
 Mistake **before** you commited?
@@ -113,7 +123,20 @@ Also if you made an spelling error in the branch name
 git branch -m feature-brunch feature-branch
 ```
 
-*Ok, lets scew something really up for a change :D*
+**In case you have locale changes you want to keep but not commit**
+It is possible to save your locale changes in a "array of quick-saves" before checking out other stuff or even working on other stuff. This is called stash. You can use it like this
+```
+#saves your local stuff but does not apply it to the repo directly
+git stash
+#Now you can do whatever
+#if you want your stuff back use
+git apply
+#and if you want your stuff back and clear the stash
+git pop
+```
+Keep in mind that your stash is an stack (a list of objects with first in first out policy). So you can stash multiple times!
+
+**Ok, lets scew something really up for a change :D**
 We want to show you can handel the worst problem: merge-conflicts. This happens if a file is changed in a way that it is not logicaly possible to prove which vesion is better
 
 ```
@@ -228,4 +251,22 @@ git reflog
 git checkout SHA
 #then branch to make a new head
 git branch NAME
+```
+
+When to force?
+------------
+
+First of all, forcing is almost **never a good idea!** Espeically **Never** do this: *git push --force* ! Use *git push --force-with-lease* instead.
+
+What you may want to do sometimes is to pull with force. That way you will **overwrite** your locale stuff! But the standart *git pull -f* is still a bad idea. Use the code below instead. Keep in mind that everthing not on the remote repo **can be lost**!!!
+```
+#we fetch (this is like pulling but without applying the changes
+git fetch --all
+git reset --hard origin/master
+#can be done with any branch
+```
+
+Sometimes you really want to remove a branch. Like when you were really on the wrong track and are ashamed of your work. We all have been there! *Keep in mind that the changes are still possibly retrievable (at least for a short time) in case you pushed sensetive data like passwords!**
+```
+git branch -D BRACH_NAME
 ```
