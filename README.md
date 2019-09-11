@@ -23,8 +23,11 @@ git clone https://github.com/fprott/git_test.git
 git add *
 git commit -m "Your Message"
 git status
+#Now check if everthing is allright
 git push
 #OR 
+#Note, you still need to add new Files
+git add NEW_FILE 
 git commit -a -m "Your Message"
 ```
 
@@ -36,3 +39,19 @@ git pull
 ```
 This picture shows how this works:
 https://i.stack.imgur.com/nWYnQ.png
+
+**You made an mistake didn't you? (If not then I made one :D)**
+Mistake **before** you commited?
+```
+git reset --hard HEAD
+git checkout HEAD
+```
+Mistake **after** you commited?
+```
+#Use ^ for later Head!
+git revert HEAD
+#WARNING, you will now meet your text editor. In case it is VIM -> enter the WORD ":q" to leave it!
+```
+_**Why do we do this the old fashioned way?**_
+**Because every (!) GUI is using these commands, to understand git you need to understand these commands!**
+*Explain how and why to use what GUI Programms*
