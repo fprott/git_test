@@ -120,13 +120,14 @@ Ok, you now see four types of things:
 
 *>>>>>>> error_branch* is one of the branches you merge from
 
-*=======* is a seperator, it has no function but to seperate the merges in the order you merged them
+*\=\=\=\=\=\=\=* is a seperator, it has no function but to seperate the merges in the order you merged them
 
-*regular code* is just code
+*regular code* is just code.
 
-**What you need to do is to delete all stuff betewen the <<<<<<< and >>>>>>> Markers that is not wanted! This does include the =======! You can modify the code how you want but you must delete everything but code!
-In the end you need to have compilable code!
-**
+
+**What you need to do is to delete all stuff betewen the <<<<<<< and >>>>>>> Markers that is not wanted! This does include the =======! You can modify the code how you want but you must delete everything but code!** 
+**In the end you need to have compilable code!**
+
 
 Done? Good then save and do
 ```
