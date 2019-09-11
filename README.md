@@ -1,3 +1,4 @@
+
 ### I use this old repo to explain stuff, first the fact that the README.md in GitHub is always coded with the Markdown syntax
 
 It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to the Tutorial that explain all!](https://guides.github.com/features/mastering-markdown/)
@@ -23,7 +24,7 @@ To add something
 git add *
 git commit -m "Your Message"
 git status
-#Now check if everthing is allright
+#Now check if everything is alright
 git push
 #OR 
 #Note, you still need to add new Files
@@ -40,24 +41,24 @@ git pull
 This picture shows how this works:
 https://i.stack.imgur.com/nWYnQ.png
 
-**Now two really usefull comants**
+**Now two really useful commands**
 ```
 #what is going on
 git status
 #what changed
 git diff
-#I really need a GUI to see what happend (NOT RECOMENDED if GitKraken or GitDesktop is installed)
+#I really need a GUI to see what happens (NOT RECOMMENDED if GitKraken or GitDesktop is installed)
 gitk
 ```
 
 **You made an mistake didn't you? (If not then make one :D)**
 
-Mistake **before** you commited?
+Mistake **before** you committed?
 ```
 git reset --hard HEAD
 git checkout HEAD
 ```
-Mistake **after** you commited?
+Mistake **after** you committed?
 ```
 #Use ^ for later Head!
 git revert HEAD
@@ -79,11 +80,11 @@ git reset wrong-file
 
 _**Why do we do this the old fashioned way?**_
 **Because every (!) GUI is using these commands, to understand git you need to understand these commands!**
-*Explain how and why to use what GUI Programms*
+*Explain how and why to use what GUI Program*
 
 Now let's branch!
 ------------
-Work on a branch for all and every experimental fetatures, let the master be always buildable if possible. On project where this is not possible we will instead use *tags* to mark the buildable versions!
+Work on a branch for all and every experimental features, let the master be always buildable if possible. On project where this is not possible we will instead use *tags* to mark the buildable versions!
 ```
 #Make a branch called A
 branch A 
@@ -141,29 +142,29 @@ To save your work
 ------------
 You know how to add stuff but this is not all! You also need to send that stuff away to the remote repo. This is a **MUST and should be done daily** (trust me I was the worst at doing that :D)
 
-To do so we push **after** we commited.
+To do so we push **after** we committed.
 ```
 git push origin master
 #if you have just one remote repo and only the master
 git push 
-#if you want to push to a specifc branch
+#if you want to push to a specific branch
 git push origin BRANCHNAME
 #in case you have many branches
 git push --all origin
-#Note you can have more then one remot repo! This is advanced and is not handeled here but you can simply change the name
+#Note you can have more then one remot repo! This is advanced and is not handled here but you can simply change the name
 git push other_remot master
 ```
 
 Ok, lets scew something really up for a change :D
 ------------
-We want to show you can handel the worst problem: merge-conflicts. This happens if a file is changed in a way that it is not logicaly possible to prove which vesion is better
+We want to show you can handle the worst problem: merge-conflicts. This happens if a file is changed in a way that it is not logicaly possible to prove which vesion is better
 
 ```
 #We make a new branch and check it out
 git checkout -b error_branch
 #make an edit in the pi file
 git checkout master
-#make a diffrent edit in the pi file
+#make a different edit in the pi file
 #Now we have a problem :D
 ```
 There a two ways to fix this without a GUI! However GUIs excel at merge conflicts, you should normally do this always by GUI.
@@ -182,31 +183,31 @@ Ok, you now see four types of things:
 
 *>>>>>>> error_branch* is one of the branches you merge from
 
-*\=\=\=\=\=\=\=* is a seperator, it has no function but to seperate the merges in the order you merged them
+*\=\=\=\=\=\=\=* is a separator, it has no function but to separate the merges in the order you merged them
 
 *regular code* is just code.
 
 
-**What you need to do is to delete all stuff betewen the <<<<<<< and >>>>>>> Markers that is not wanted! This does include the =======! You can modify the code how you want but you must delete everything but code!** 
+**What you need to do is to delete all stuff between the <<<<<<< and >>>>>>> Markers that is not wanted! This does include the =======! You can modify the code how you want but you must delete everything but code!** 
 **In the end you need to have compilable code!**
 
 
 Done? Good then save and do
 ```
-#add everthing
+#add everything
 git add .
 #you do not need a commit comment since there will be one generated for you. But you can give one if you like!
 git commit 
 ```
 
-*Alternativ you may also use the easy console way by doing this* **instead**
+*Alternatively you may also use the easy console way by doing this* **instead**
 
 ```
 #GUIs can do this way better but there is a interactive way
 git merge -i 
 ```
 
-**Ok, now I want to show a special kind of branch called the *octopus* problem. This is where GitKraken got his name and it is a hard problem for many version controll software. But don't worry I only show the basics.**
+**Ok, now I want to show a special kind of branch called the *octopus* problem. This is where GitKraken got his name and it is a hard problem for many version control software. But don't worry I only show the basics.**
 
 ```
 #assume or make at least tree branches, note the master is also a branch but we do not use it for now
@@ -233,20 +234,20 @@ git merge B C
 
 **NOTE: Octopus merges are very very hard to resolve if you have merge conflicts! I strongly recommend NOT doing them on conflicted code! It is not meant to do this!**
 
-**If you have a merge conflict do multiple seperate merges first !**
+**If you have a merge conflict do multiple separate merges first !**
 
 **Use GitKraken to do complex operations with conflicts or merge!**
 
-**If you work in a team try to either ignore contested files (configs usually) or have a seperate merge strategie for option files!**
+**If you work in a team try to either ignore contested files (configs usually) or have a separate merge strategies for option files!**
 
-**Alternativly use submodules!**
+**Alternatively use submodules!**
 
 Help, I lost my head on the way
 ------------
 Okay, that can happen (and does happen when you either work with submodules or rebase) do not worry.
 
-*What happend?*
-Well you now are in a part of the tree that is not the end of a branch. And therfore you are currently merly visting an old state. 
+*What happened?*
+Well you now are in a part of the tree that is not the end of a branch. And therefore you are currently merely visiting an old state. 
 *That means?*
 Every change you make will **not** belong to any branch!
 *So I should no change anything?*
@@ -275,9 +276,9 @@ git branch NAME
 When to force?
 ------------
 
-First of all, forcing is almost **never a good idea!** Espeically **Never** do this: *git push --force* ! Use *git push --force-with-lease* instead.
+First of all, forcing is almost **never a good idea!** Especially **Never** do this: *git push --force* ! Use *git push --force-with-lease* instead.
 
-What you may want to do sometimes is to pull with force. That way you will **overwrite** your locale stuff! But the standart *git pull -f* is still a bad idea. Use the code below instead. Keep in mind that everthing not on the remote repo **can be lost**!!!
+What you may want to do sometimes is to pull with force. That way you will **overwrite** your locale stuff! But the standard *git pull -f* is still a bad idea. Use the code below instead. Keep in mind that everything not on the remote repo **can be lost**!!!
 ```
 #we fetch (this is like pulling but without applying the changes
 git fetch --all
@@ -285,7 +286,7 @@ git reset --hard origin/master
 #can be done with any branch
 ```
 
-Sometimes you really want to remove a branch. Like when you were really on the wrong track and are ashamed of your work. We all have been there! *Keep in mind that the changes are still possibly retrievable (at least for a short time) in case you pushed sensetive data like passwords!**
+Sometimes you really want to remove a branch. Like when you were really on the wrong track and are ashamed of your work. We all have been there! *Keep in mind that the changes are still possibly retrievable (at least for a short time) in case you pushed sensitive data like passwords!**
 ```
 git branch -D BRACH_NAME
 ```
@@ -313,7 +314,7 @@ anyfile.txt
 !index.html
 #if you want to blacklist .o and .i files
 *.[oi]
-#if you want to blacklis all files named generic (with many extensions)
+#if you want to blacklist all files named generic (with many extensions)
 *.generic
 #if you want to exclude the Python folder (for Python cache)
 .Python
