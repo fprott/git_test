@@ -327,3 +327,28 @@ All files that excluded will not be added when you type *add **
 Simple, there is an extension for them! Use the following two tutorials
 https://git-lfs.github.com/
 https://help.github.com/en/articles/configuring-git-large-file-storage
+
+How to deploy?
+------------
+
+Normally we want to have a good way to deploy the software onto the beta-testers and applications as soon as possible.
+**Since this is a basic tutorial I will only tell what it does, not how to. This is about awareness*
+There are two common ways to do it (and the manual way which is also too common):
+* Deamon
+* Webhooks
+
+A *Deamon* usually takes the stuff that is either pushed or pull requested onto a special branch or under a special tag, tests it (test pipeline) and then pushes it onto the field repos. It may also run code to directly compile and/or modify the code arcoding to the device. So a old computer gets the instructions to use Algo A instead of the better but more costly algo B.
+*We do not handle Deamons her since we only have 5 Git users and we need them all!*
+
+** Webhooks **
+
+*show where the webhook API in GitHub is ( https://github.com/ORGA/REPO/settings/keys )*
+Apply the ssh keys for your web-hook! After that you can send a JSON or x-www-form (none standardized) to your application with
+https://github.com/ORGA/REPO/settings/hooks/new
+
+You can either push everything or have specific events. This is nice for scripts since they can run without compiling (NOTE: Python has to restart)
+
+GitHub will now send you an request and/or *pull for you* 
+
+**Keep in mind you should only do this under the ssh key protection **
+
