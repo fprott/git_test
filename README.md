@@ -7,5 +7,11 @@ But for more complex task try using the wiki with mediawiki syntax!
 **So lets start**
 
 ```
-git init
+#this will make an empty repo, try it now
+git init 
+#if you want to clone this then use
+git clone git@github.com:fprott/git_test.git
+#be ware, if you operate behind a firewall or do not want to configure the computer with your certificate and use a private repo then http is better !
+git clone https://github.com/fprott/git_test.git
 ```
+**Now make the standart operations**
