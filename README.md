@@ -40,7 +40,7 @@ git pull
 This picture shows how this works:
 https://i.stack.imgur.com/nWYnQ.png
 
-**You made an mistake didn't you? (If not then I made one :D)**
+**You made an mistake didn't you? (If not then make one :D)**
 
 Mistake **before** you commited?
 ```
@@ -53,6 +53,20 @@ Mistake **after** you commited?
 git revert HEAD
 #WARNING, you will now meet your text editor. In case it is VIM -> enter the WORD ":q" to leave it!
 ```
+Mistake made in the **commit comment**
+```
+git commit --amend
+```
+You forgot to add a file:
+```
+git add missed-file.txt
+git commit --amend
+```
+You added something that you really should not:
+```
+git reset wrong-file
+```
+
 _**Why do we do this the old fashioned way?**_
 **Because every (!) GUI is using these commands, to understand git you need to understand these commands!**
 *Explain how and why to use what GUI Programms*
@@ -87,11 +101,16 @@ git merge BRANCHNAME
 #Now you may want to delte your branch, but this is only needed if you really need a clean look. Usually don't do this !
 git branch -d BRANCHNAME
 ```
-Note, when you rebase or use submodules you may loose your head. If that happens then checkout out the instructions future down "elp, I lost my head on the way".
+Note, when you rebase or use submodules you may loose your head. If that happens then checkout out [the instructions future down](#Help, I lost my head on the way).
 
 Keep in mind that this might help you in an emergency (google for more details)
 ```
 git rebase --abort
+```
+
+Also if you made an spelling error in the branch name
+```
+git branch -m feature-brunch feature-branch
 ```
 
 *Ok, lets scew something really up for a change :D*
@@ -180,5 +199,33 @@ git merge B C
 
 **Alternativly use submodules!**
 
-###Help, I lost my head on the way###
-Okay, that can happen (and does happen when you 
+Help, I lost my head on the way
+------------
+Okay, that can happen (and does happen when you either work with submodules or rebase) do not worry.
+
+*What happend?*
+Well you now are in a part of the tree that is not the end of a branch. And therfore you are currently merly visting an old state. 
+*That means?*
+Every change you make will **not** belong to any branch!
+*So I should no change anything?*
+Correct. **Do NOT change anything!** Instead try to either fix this by getting back to your HEAD or branch out!
+
+This will bring you back to the head, but **beware** this is not always the right state (check the code!):
+```
+git checkout HEAD
+````
+
+In case you work with submoduls you often just are not on the right master/branch so just use:
+```
+git checkout master
+```
+
+If you want to work on none HEAD state then
+```
+#Find out where you are
+git reflog
+#check out the right point or stay where you are
+git checkout SHA
+#then branch to make a new head
+git branch NAME
+```
