@@ -9,6 +9,41 @@ So lets start
 ------------
 *First explain the basics using this link https://stackoverflow.com/questions/8198105/how-does-git-store-files*
 
+**Then config your stuff**
+```
+git config --global user.name "Your name here"
+git config --global user.email "your_email@example.com"
+#If you work on linux you may want to enable pretty colors
+git config --global color.ui true
+#If in Linux you also really should change the editor, else you may use vim
+git config --global core.editor nano
+```
+
+Now we need to create a ssh key which is basically our password replacement. That thing is super important, and you can have many (each per computer is recommended) or just one.
+
+Under the Windows cmd or Linux you can:
+
+```
+ssh-keygen -t rsa -C "your_email@example.com"
+
+```
+
+Under linux you now find a hidden folder in your home called *.ssh* . Under Windows it is in C:\Users\<Benutzername>\.ssh\ and possible hidden. **THIS is super important, do not loose or expose this folder to anyone**
+
+In that folders are two files a id_rsa.pub and a id_rsa file.
+**ONLY EVER use .pub files!!! The other files contain your private key! Never give them away!**
+Copy the contents of the .pub file and paste them into GitHub via:
+* Go to your github Account Settings
+* Click “SSH Keys” on the left.
+* Click “Add SSH Key” on the right.
+* Add a label (like “My laptop”) and paste the public key into the big text box.
+
+For Windows this small tutorial might help:
+https://dhue.de/git-fur-windows-installieren-und-ssh-keys-nutzen/ 
+
+
+**Now get really started**
+
 ```
 #this will make an empty repo, try it now
 git init 
