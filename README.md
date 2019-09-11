@@ -56,3 +56,39 @@ git revert HEAD
 _**Why do we do this the old fashioned way?**_
 **Because every (!) GUI is using these commands, to understand git you need to understand these commands!**
 *Explain how and why to use what GUI Programms*
+
+**Now let's branch!**
+Work on a branch for all and every experimental fetatures, let the master be always buildable if possible. On project where this is not possible we will instead use *tags* to mark the buildable versions!
+```
+#Make a branch called A
+branch A 
+checkout A
+#You see the branches with
+branch
+```
+Now change something and merge to the master
+```
+#Now change something in the branch but NOT in the master
+#Now we switch in the branch we want to "keep" / be the one *merged too*
+git checkout master
+git merge BRANCHNAME
+```
+
+Ok, if you want to combine the branch with the master **without** a merge to keep it clean
+```
+#Now change something in the branch but NOT in the master
+#If you are not in the branch check it out 
+git checkout BRANCHNAME
+git rebase master
+#Now we ahead of our own master who is way behind us!
+#We have to merge it to ourselfe
+git checkout master
+git merge BRANCHNAME
+#Now you may want to delte your branch, but this is only needed if you really need a clean look. Usually don't do this !
+git branch -d BRANCHNAME
+```
+
+Keep in mind that this might help you in an emergency (google for more details)
+```
+git rebase --abort
+```
