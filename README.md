@@ -92,3 +92,46 @@ Keep in mind that this might help you in an emergency (google for more details)
 ```
 git rebase --abort
 ```
+
+*Ok, lets scew something really up for a change :D*
+We want to show you can handel the worst problem: merge-conflicts. This happens if a file is changed in a way that it is not logicaly possible to prove which vesion is better
+
+```
+#We make a new branch and check it out
+git checkout -b error_branch
+#make an edit in the pi file
+git checkout master
+#make a diffrent edit in the pi file
+#Now we have a problem :D
+```
+There a two ways to fix this without a GUI! However GUIs excel at merge conflicts, you should normally do this always by GUI.
+
+First do it the normal way *This can happen even with GUI tools. Eclipse VC is notorious for this*
+```
+git merge error_branch
+#Note that this will fail and give you a warning
+#We now have to fix this by hand. Open the problem file with a *text editor*, I use nano (in windows please use notepad++ trough the explorer)
+nano pi.txt #On windows do this by clicking on the file
+```
+
+Ok, you now see four types of things:
+*<<<<<<< HEAD* is the branch you merge too
+*>>>>>>> error_branch* is one of the branches you merge from
+*=======* is a seperator, it has no function but to seperate the merges in the order you merged them
+*regular code* is just code
+
+**What you need to do is to delete all stuff betewen the ** *<<<<<<<* ** and ** *>>>>>>>* ** that is not wanted! You can modify the code how you want but you must delete everything but code!**
+
+Done? Good then save and do
+```
+#add everthing
+git add .
+#you do not need a commit comment since there will be one generated for you. But you can give one if you like!
+git commit 
+```
+
+*Alternativ you may also use the easy console way by doing this **instead** *
+```
+#GUIs can do this way better but there is a interactive way
+git merge -i 
+```
