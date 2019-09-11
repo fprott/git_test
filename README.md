@@ -87,6 +87,7 @@ git merge BRANCHNAME
 #Now you may want to delte your branch, but this is only needed if you really need a clean look. Usually don't do this !
 git branch -d BRANCHNAME
 ```
+Note, when you rebase or use submodules you may loose your head. If that happens then checkout out the instructions future down "elp, I lost my head on the way".
 
 Keep in mind that this might help you in an emergency (google for more details)
 ```
@@ -175,7 +176,9 @@ git merge B C
 
 **Use GitKraken to do complex operations with conflicts or merge!**
 
-**If you work in a team try to either ignore contested files (configs usually) or have a seperate merge strategie for option files**
+**If you work in a team try to either ignore contested files (configs usually) or have a seperate merge strategie for option files!**
 
-**Alternativly use submodules**
+**Alternativly use submodules!**
 
+###Help, I lost my head on the way###
+Okay, that can happen (and does happen when you 
