@@ -41,6 +41,7 @@ This picture shows how this works:
 https://i.stack.imgur.com/nWYnQ.png
 
 **You made an mistake didn't you? (If not then I made one :D)**
+
 Mistake **before** you commited?
 ```
 git reset --hard HEAD
