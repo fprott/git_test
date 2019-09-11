@@ -270,3 +270,40 @@ Sometimes you really want to remove a branch. Like when you were really on the w
 ```
 git branch -D BRACH_NAME
 ```
+
+Git ignore and large files
+------------
+
+You want to have a file called *.gitignore* in your folder. This file will be hidden in Linux after you made it (since it carries a postfix point). That file allows you to ignore certain files. This is needed for
+* all your IDE specific files and folders
+* large files
+* temporary files
+* lokal files (like databases)
+* certifcates
+* everything that needs to be secure
+
+To make something ignored simply add to the file:
+```
+# A comment
+# Name of a specific file (including the extension)
+filename.type 
+anyfile.txt
+# if you want to blacklist all html files
+*.html
+#if you want to exclude a specific html file
+!index.html
+#if you want to blacklist .o and .i files
+*.[oi]
+#if you want to blacklis all files named generic (with many extensions)
+*.generic
+#if you want to exclude the Python folder (for Python cache)
+.Python
+```
+All files that excluded will not be added when you type *add **
+
+**Do this to large files since your repo can handle large files but GitHub does NOT**
+
+*What if I need large files?*
+Simple, there is an extension for them! Use the following two tutorials
+https://git-lfs.github.com/
+https://help.github.com/en/articles/configuring-git-large-file-storage
