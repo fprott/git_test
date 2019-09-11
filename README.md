@@ -124,7 +124,9 @@ Ok, you now see four types of things:
 
 *regular code* is just code
 
-**What you need to do is to delete all stuff betewen the ** *<<<<<<<* ** and ** *>>>>>>>* ** that is not wanted! You can modify the code how you want but you must delete everything but code!**
+**What you need to do is to delete all stuff betewen the <<<<<<< and >>>>>>> Markers that is not wanted! This does include the =======! You can modify the code how you want but you must delete everything but code!
+In the end you need to have compilable code!
+**
 
 Done? Good then save and do
 ```
@@ -135,6 +137,7 @@ git commit
 ```
 
 *Alternativ you may also use the easy console way by doing this **instead** *
+
 ```
 #GUIs can do this way better but there is a interactive way
 git merge -i 
