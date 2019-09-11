@@ -143,3 +143,39 @@ git commit
 #GUIs can do this way better but there is a interactive way
 git merge -i 
 ```
+
+**Ok, now I want to show a special kind of branch called the *octopus* problem. This is where GitKraken got his name and it is a hard problem for many version controll software. But don't worry I only show the basics.**
+
+```
+#assume or make at least tree branches, note the master is also a branch but we do not use it for now
+git checkout -b A
+#add file A
+git add *
+git commit -m "added A for testing reasons"
+#go to the past
+git checkout master
+git checkout -b B
+#add file B
+git add *
+git commit -a -m "added B for testing reasons"
+git checkout master
+git checkout -b C
+#add file C
+git add *
+git commit -a -m "added C for testing reasons"
+git checkout master
+git checkout A
+#NOTE we seperate by space not with a , or ; 
+git merge B C
+```
+
+**NOTE: Octopus merges are very very hard to resolve if you have merge conflicts! I strongly recommend NOT doing them on conflicted code! It is not meant to do this!**
+
+**If you have a merge conflict do multiple seperate merges first !**
+
+**Use GitKraken to do complex operations with conflicts or merge!**
+
+**If you work in a team try to either ignore contested files (configs usually) or have a seperate merge strategie for option files**
+
+**Alternativly use submodules**
+
