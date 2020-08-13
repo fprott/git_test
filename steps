@@ -24,6 +24,11 @@ GitHub Desktop
 19.) Unstash
 20.) Create a pull request!
 GitHub Desktop CAN NOT "go back in time" or have big stashes or something in this direction. It can do just the basic but can do them very very good!
+This might help a bit for the ends of the branches:
+https://github.com/fprott/git_test/compare/master@%7B1day%7D...master
+
+21.) Do some stupid changes
+22.) Delete them
 
 GitHub
 1.) Go to GitHub
@@ -42,6 +47,10 @@ Warning, GitHub is not the best side for this!
 13.) Look into the issues
 14.) Skim the stastics
 15.) Look into the manage access
-16.) Look & do the pull request! (Reject one for fun)
+16.) Look & do the pull request onto master! (Reject for fun)
 
 GitKraken
+1.) Clone the repo or use an existing repo
+2.) Explain the need for issue tracker but do not elaborate too much
+3.) Look at the tree
+4.) Compare three things in the tree
