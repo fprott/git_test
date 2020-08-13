@@ -1,0 +1,23 @@
+Steps for the GUI Presentation
+
+1.) Do the presentation!
+2.) Give out Glossary!
+3.) Open GitHub Desktop
+4.) Clone this repo
+5.) Look in the History of "Ein kleines Gedicht"
+6.) Show the diff
+7.) Make a new Branch, everybody can make his own language
+8.) Tanslate the thing 
+9.) Commit
+10.)Push
+11.)Pull the others
+12.) Make a few little changes but do NOT commit!
+13.) Try Change the branch
+14.) Get a message (and don't change)
+15.) Stash
+16.) Look into the file, the change is gone!
+17.) Make a diffrent change and stash
+17.) b) Notice that you can only stash once! This is a drawback of GitHub Desktop!
+18.) Change the branch and not fail
+19.) Unstash
+GitHub Desktop CAN NOT "go back in time" or have big stashes or something in this direction. It can do just the basic but can do them very very good!
