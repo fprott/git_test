@@ -69,7 +69,8 @@ GitKraken
 If you do rebase then you want You want the rebase BRANCH onto master !
 You really shouldn't, it looses the master behind!
 15.) Branch again
-16.) Edit an existing line of code! This will break something!
+16.) Edit an existing line of code! To break something!
+Edit an existing line of code in two branches after the merge! This will cause a confilct!
 17.) Merge, this will fail!
+18.) Resolve the confilct!
 
-14.) Do a pull reuqest
