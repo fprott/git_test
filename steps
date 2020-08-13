@@ -2,6 +2,8 @@ Steps for the GUI Presentation
 
 1.) Do the presentation!
 2.) Give out Glossary!
+
+GitHub Desktop
 3.) Open GitHub Desktop
 4.) Clone this repo
 5.) Look in the History of "Ein kleines Gedicht"
@@ -20,4 +22,24 @@ Steps for the GUI Presentation
 17.) b) Notice that you can only stash once! This is a drawback of GitHub Desktop!
 18.) Change the branch and not fail
 19.) Unstash
+20.) Create a pull request!
 GitHub Desktop CAN NOT "go back in time" or have big stashes or something in this direction. It can do just the basic but can do them very very good!
+
+GitHub
+1.) Go to GitHub
+2.) Log in
+3.) Find your repo
+4.) Look into the readme
+5.) Look into the pi.txt file
+6.) Go back in time trough the History with blame
+7.) Notice that this History is much smaller then the normal History
+8.) Look at the first entry
+9.) Go into text 
+10.) Click on History
+11.) Mind the diff (unified and split!)
+Warning, GitHub is not the best side for this!
+12.) Look into the wiki
+13.) Look into the issues
+14.) Skim the stastics
+15.) Look into the manage access
+16.) Look & do the pull request! (Reject one for fun)
