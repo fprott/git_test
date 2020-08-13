@@ -69,7 +69,7 @@ GitKraken
 If you do rebase then you want You want the rebase BRANCH onto master !
 You really shouldn't, it looses the master behind!
 15.) Branch again
-16.) Change something in master and in the new branch that contradicts
+16.) Edit an existing line of code!
 17.) Merge
 
 14.) Do a pull reuqest
