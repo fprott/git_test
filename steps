@@ -53,4 +53,9 @@ GitKraken
 1.) Clone the repo or use an existing repo
 2.) Explain the need for issue tracker but do not elaborate too much
 3.) Look at the tree
-4.) Compare three things in the tree
+4.) Stage and commit a little change
+5.) Push
+4.) Compare three things in the tree (keep in mind that the file must exist)
+5.) Take a few minutes and learn the diff tree
+6.) Make some changes
+7.) Push or do a Pull Request
