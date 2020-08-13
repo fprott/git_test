@@ -70,6 +70,6 @@ If you do rebase then you want You want the rebase BRANCH onto master !
 You really shouldn't, it looses the master behind!
 15.) Branch again
 16.) Edit an existing line of code! This will break something!
-17.) Merge
+17.) Merge, this will fail!
 
 14.) Do a pull reuqest
