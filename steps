@@ -73,4 +73,6 @@ You really shouldn't, it looses the master behind!
 Edit an existing line of code in two branches after the merge! This will cause a confilct!
 17.) Merge, this will fail!
 18.) Resolve the confilct!
-
+19.) now make a comit that you do not like
+20.) Delte it!
+21.) Now make a file that you do not like, and not stage it!
