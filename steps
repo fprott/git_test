@@ -65,8 +65,8 @@ GitKraken
 11.) Change something
 12.) Switch branches after save
 13.) Look how the files are changing with
-14.) Rebase (EXPLAIN THE DIFFRENCE!)
-You want the rebase BRANCH onto master !
+14.) Merge (Explain the diffrence to rebase and why rebase is kind of bad here)
+If you do rebase then you want You want the rebase BRANCH onto master !
 15.) Branch again
 16.) Change something
 17.) Merge
