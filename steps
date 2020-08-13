@@ -1,4 +1,4 @@
-Steps for the GUI Presentation:
+Steps for the GUI Presentation
 
 1.) Do the presentation!
 2.) Give out Glossary!
@@ -58,4 +58,16 @@ GitKraken
 4.) Compare three things in the tree (keep in mind that the file must exist)
 5.) Take a few minutes and learn the diff tree
 6.) Make some changes
-7.) Push or do a Pull Request
+7.) Stage changes
+8.) Look how you can unstage changes!
+9.) Push
+10.)  Make a new branche, look how it works
+11.) Change something
+12.) Switch branches after save
+13.) Look how the files are changing with
+14.) Rebase (EXPLAIN THE DIFFRENCE!)
+15.) Branch again
+16.) Change something
+17.) Merge
+
+14.) Do a pull reuqest
