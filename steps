@@ -67,6 +67,7 @@ GitKraken
 13.) Look how the files are changing with
 14.) Merge (Explain the diffrence to rebase and why rebase is kind of bad here)
 If you do rebase then you want You want the rebase BRANCH onto master !
+You really shouldn't, it looses the master behind!
 15.) Branch again
 16.) Change something in master and in the new branch that contradicts
 17.) Merge
